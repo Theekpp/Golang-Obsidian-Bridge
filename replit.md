@@ -25,3 +25,30 @@ pnpm workspace monorepo using TypeScript. Each package manages its own dependenc
 - `pnpm --filter @workspace/api-server run dev` — run API server locally
 
 See the `pnpm-workspace` skill for workspace structure, TypeScript setup, and package details.
+
+## MCP Obsidian Server (Go)
+
+A standalone MCP server written in Go for interacting with Obsidian via the Local REST API plugin.
+
+- **Location**: `mcp-obsidian/`
+- **Language**: Go 1.25
+- **MCP library**: `github.com/mark3labs/mcp-go v0.32.0`
+- **Transport**: stdio (JSON-RPC 2.0)
+
+### Build
+
+```bash
+cd mcp-obsidian
+go build -o mcp-obsidian .
+```
+
+### Run
+
+```bash
+export OBSIDIAN_API_KEY="your-key"
+./mcp-obsidian
+```
+
+### Tools provided
+
+`list_files`, `read_note`, `create_note`, `update_note`, `append_to_note`, `delete_note`, `search_notes`, `get_active_note`, `open_note`, `get_periodic_note`, `server_info`

@@ -47,3 +47,7 @@ Thumbs.db
 # Replit
 .cache/
 .local/
+
+# Go binaries
+mcp-obsidian/mcp-obsidian-bin
+mcp-obsidian/mcp-obsidian
